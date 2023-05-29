@@ -57,3 +57,7 @@
   color: #000000;
   scale: 1.1;
 }
+
+.deleteButton:active .deleteIcon svg {
+  scale: 0.95;
+}
