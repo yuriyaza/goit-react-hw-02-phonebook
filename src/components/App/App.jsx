@@ -30,9 +30,9 @@ export class App extends React.Component {
     this.setState({ contacts: [...this.state.contacts, newContact] });
   };
 
-  onDeleteContact = e => {
+  onDeleteContact = deletedContactId => {
     const newList = this.state.contacts.filter(
-      item => item.id !== e.currentTarget.id
+      item => item.id !== deletedContactId
     );
     this.setState({ contacts: newList });
   };

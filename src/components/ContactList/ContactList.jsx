@@ -24,8 +24,7 @@ export const ContactList = ({ contacts, onDeleteContact }) => {
             <button
               className={css.deleteButton}
               type="button"
-              id={item.id}
-              onClick={onDeleteContact}>
+              onClick={()=>onDeleteContact(item.id)}>
               <span className={css.deleteIcon}><BsTrash /></span>
             </button>
 
