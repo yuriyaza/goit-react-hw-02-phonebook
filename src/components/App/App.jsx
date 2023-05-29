@@ -20,9 +20,9 @@ export class App extends React.Component {
   };
 
   onAddContact = newContact => {
-    const namesList = this.state.contacts.map(item => item.name);
+    const namesList = this.state.contacts.map(item => item.name.toLowerCase());
 
-    if (namesList.includes(newContact.name)) {
+    if (namesList.includes(newContact.name.toLowerCase())) {
       Notify.failure(`${newContact.name} is already in contacts`);
       return;
     }
